@@ -1,10 +1,17 @@
 var bg = []
 
 function appInit() {
-    bg.push(14, 14);
-    bg.push(15, 14);
-    bg.push(15, 14);
-    bg.push(15, 15);
+    bg.push(14);
+    bg.push(14);
+
+    bg.push(15);
+    bg.push(14);
+
+    bg.push(14);
+    bg.push(15);
+
+    bg.push(15);
+    bg.push(15);
 }
 
 function appUpdate(dt) {
