@@ -37,6 +37,12 @@ function appUpdate(dt) {
 // drawMap(x, y, [tileX, tileY], coloms, rows)
 function appDraw() {
     drawMap(-off, -off, bg, 40, 30);
-    
+
     drawSprite(0, 0, 0, 0, 16, 16);
+
+    for (var y = 0; y<5; y++) {
+        for (var x = 0; x<5; x++) {
+            drawSprite(50 + x * 16, 50 + y * 50, 0, 0, 2, 2);
+        }
+    }
 }
