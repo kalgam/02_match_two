@@ -6,7 +6,17 @@ function appInit() {
 
     bg.push(15);
     bg.push(14);
+    bg.push(14);
+    bg.push(14);
 
+    bg.push(15);
+    bg.push(14);
+
+    bg.push(14);
+    bg.push(15);
+
+    bg.push(15);
+    bg.push(15);
     bg.push(14);
     bg.push(15);
 
