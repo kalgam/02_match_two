@@ -1,4 +1,5 @@
 var bg = []
+var off = 0
 
 function appInit() {
 
@@ -22,6 +23,8 @@ function appInit() {
 }
 
 function appUpdate(dt) {
+    off += dt * 5;
+
     if (mouseBtn(0)) {
         reload();
     }
@@ -33,5 +36,5 @@ function appUpdate(dt) {
 function appDraw() {
     drawSprite(0, 0, 0, 0, 16, 16);
 
-    drawMap(0, 0, bg, 40, 30);
+    drawMap(off, off, bg, 40, 30);
 }
