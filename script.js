@@ -42,7 +42,7 @@ function appDraw() {
 
     for (var y = 0; y<5; y++) {
         for (var x = 0; x<5; x++) {
-            drawSprite(50 + x * 16, 50 + y * 50, 0, 0, 2, 2);
+            drawSprite(50 + x * 16, 50 + y * 16, 0, 0, 2, 2);
         }
     }
 }
