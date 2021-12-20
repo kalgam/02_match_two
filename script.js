@@ -24,7 +24,9 @@ function appInit() {
 
 function appUpdate(dt) {
     off += dt * 5;
-
+    if (off>16) {
+        off-=16;
+    }
     if (mouseBtn(0)) {
         reload();
     }
@@ -36,5 +38,5 @@ function appUpdate(dt) {
 function appDraw() {
     drawSprite(0, 0, 0, 0, 16, 16);
 
-    drawMap(off, off, bg, 40, 30);
+    drawMap(-off, -off, bg, 40, 30);
 }
