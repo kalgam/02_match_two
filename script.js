@@ -36,5 +36,5 @@ function appUpdate(dt) {
 function appDraw() {
     drawSprite(0, 0, 0, 0, 16, 16);
 
-    drawMap(30, 30, bg, 2, 2);
+    drawMap(30, 30, bg, 4, 2);
 }
