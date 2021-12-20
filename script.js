@@ -2,20 +2,22 @@ var bg = []
 
 function appInit() {
 
-    for (var i=0; i<20; i++) {
-        bg.push(14);
-        bg.push(14);
+    for (var j=0; j<15; j++) {
+        for (var i=0; i<20; i++) {
+            bg.push(14);
+            bg.push(14);
 
-        bg.push(15);
-        bg.push(14);
-    }
+            bg.push(15);
+            bg.push(14);
+        }
 
-    for (var i=0; i<20; i++) {
-        bg.push(14);
-        bg.push(15);
+        for (var i=0; i<20; i++) {
+            bg.push(14);
+            bg.push(15);
 
-        bg.push(15);
-        bg.push(15);
+            bg.push(15);
+            bg.push(15);
+        }
     }
 }
 
@@ -31,5 +33,5 @@ function appUpdate(dt) {
 function appDraw() {
     drawSprite(0, 0, 0, 0, 16, 16);
 
-    drawMap(30, 30, bg, 40, 2);
+    drawMap(0, 0, bg, 40, 30);
 }
