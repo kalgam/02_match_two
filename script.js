@@ -36,7 +36,7 @@ function appUpdate(dt) {
 // drawSprite(x, y, tileX, tileY, spriteWidth, wpriteHeight)
 // drawMap(x, y, [tileX, tileY], coloms, rows)
 function appDraw() {
-    drawSprite(0, 0, 0, 0, 16, 16);
-
     drawMap(-off, -off, bg, 40, 30);
+    
+    drawSprite(0, 0, 0, 0, 16, 16);
 }
