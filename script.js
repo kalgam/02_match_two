@@ -9,5 +9,5 @@ function appUpdate(dt) {
 }
 
 function appDraw() {
-
+    drawSprite(0, 0, 0, 0);
 }
