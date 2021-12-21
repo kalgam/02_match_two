@@ -1,5 +1,7 @@
-var bg = []
-var off = 0
+var bg = [];
+var off = 0;
+var rows = 4;
+var cols = 4;
 
 function appInit() {
 
@@ -36,13 +38,17 @@ function appUpdate(dt) {
 // drawSprite(x, y, tileX, tileY, spriteWidth, wpriteHeight)
 // drawMap(x, y, [tileX, tileY], coloms, rows)
 function appDraw() {
+    var w = screenWidth();
+    var h = screenHeight();
+    var cx = w/2;
+    var cy = h/2;
     drawMap(-off, -off, bg, 40, 30);
 
     drawSprite(0, 0, 0, 0, 16, 16);
 
     for (var y = 0; y<5; y++) {
         for (var x = 0; x<5; x++) {
-            drawSprite(50 + x * 16, 50 + y * 16, 0, 0, 2, 2);
+            drawSprite((w - cols) / 2, (h - rows) / 2, 0, 0, 2, 2);
         }
     }
 }
