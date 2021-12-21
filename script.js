@@ -1,7 +1,7 @@
 var bg = [];
 var off = 0;
-var rows = 4;
-var cols = 4;
+var rows = 8;
+var cols = 6;
 
 function appInit() {
 
