@@ -61,7 +61,7 @@ function appDraw() {
     for (var y = 0; y<rows; y++) {
         for (var x = 0; x<cols; x++) {
             if (x == 0 && y == 0) {
-                drawSprite((w - cols * 16) / 2 + x * 16, (h - rows * 16) / 2 + y * 16, 0, f * 2, 2, 2);
+                drawSprite((w - cols * 16) / 2 + x * 16, (h - rows * 16) / 2 + y * 16, f * 2, 0, 2, 2);
             } else {
                 drawSprite((w - cols * 16) / 2 + x * 16, (h - rows * 16) / 2 + y * 16, 0, 0, 2, 2);
             }
