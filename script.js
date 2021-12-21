@@ -46,9 +46,9 @@ function appDraw() {
 
     drawSprite(0, 0, 0, 0, 16, 16);
 
-    for (var y = 0; y<rows; cols++) {
-        for (var x = 0; x<cols; rows++) {
-            drawSprite((w - cols * 16) / 2, (h - rows * 16) / 2, 0, 0, 2, 2);
+    for (var y = 0; y<rows; y++) {
+        for (var x = 0; x<cols; x++) {
+            drawSprite((w - cols * 16) / 2 + x * 16, (h - rows * 16) / 2 + y * 16, 0, 0, 2, 2);
         }
     }
 }
