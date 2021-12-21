@@ -34,11 +34,18 @@ function appUpdate(dt) {
 
     if (time >= 0) {
         time += dt;
-        f = Math.min(Math.floor(time * 20), 4);
+        f = Math.floor(time * 20);
+        if (f >= 5) {
+            time = -1;
+        }
     }
     if (mouseBtn(0)) {
-        time = 0;
-        f = 0;
+        if (f == 0) {
+            time = 0;
+            f = 0;
+        } else {
+            f = 0;
+        }
     }
 
     if (mouseBtn(0) && mouseX() > screenWidth() - 16 && mouseY() > screenHeight() - 16) {
@@ -61,7 +68,11 @@ function appDraw() {
     for (var y = 0; y<rows; y++) {
         for (var x = 0; x<cols; x++) {
             if (x == 0 && y == 0) {
-                drawSprite((w - cols * 16) / 2 + x * 16, (h - rows * 16) / 2 + y * 16, f * 2, 0, 2, 2);
+                if (f == 4)
+                    drawSprite((w - cols * 16) / 2 + x * 16 + 4, (h - rows * 16) / 2 + y * 16 + 4, 0, 2, 1, 1);
+                drawSprite((w - cols * 16) / 2 + x * 16, (h - rows * 16) / 2 + y * 16, f % 5 * 2, 0, 2, 2);
+                if (f == 5)
+                    drawSprite((w - cols * 16) / 2 + x * 16 + 4, (h - rows * 16) / 2 + y * 16 + 4, 0, 2, 1, 1);
             } else {
                 drawSprite((w - cols * 16) / 2 + x * 16, (h - rows * 16) / 2 + y * 16, 0, 0, 2, 2);
             }
