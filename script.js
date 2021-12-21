@@ -34,7 +34,7 @@ function appUpdate(dt) {
 
     if (time >= 0) {
         time += dt;
-        f = Math.floor(time * 20);
+        f = Math.floor(time * 2);
         if (f >= 5) {
             time = -1;
         }
