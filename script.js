@@ -40,7 +40,7 @@ function appUpdate(dt) {
             time = -1;
         }
     }
-    if (mouseBtn(0) == !mouseDown) {
+    if (mouseBtn(0) && !mouseDown) {
         if (f == 0) {
             time = 0;
             f = 0;
