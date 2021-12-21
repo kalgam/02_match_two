@@ -2,6 +2,8 @@ var bg = [];
 var off = 0;
 var cols = 8;
 var rows = 6;
+var f = 0;
+var time = -1;
 
 function appInit() {
 
@@ -29,7 +31,17 @@ function appUpdate(dt) {
     if (off>16) {
         off-=16;
     }
+
+    if (time >= 0) {
+        time += dt;
+        f = Math.min(Math.floor(time * 20), 4);
+    }
     if (mouseBtn(0)) {
+        time = 0;
+        f = 0;
+    }
+
+    if (mouseBtn(0) && mouseX() > screenWidth() - 16 && mouseY() > screenHeight() - 16) {
         reload();
     }
 }
@@ -48,7 +60,11 @@ function appDraw() {
 
     for (var y = 0; y<rows; y++) {
         for (var x = 0; x<cols; x++) {
-            drawSprite((w - cols * 16) / 2 + x * 16, (h - rows * 16) / 2 + y * 16, 0, 0, 2, 2);
+            if (x == 0 && y == 0) {
+                drawSprite((w - cols * 16) / 2 + x * 16, (h - rows * 16) / 2 + y * 16, 0, f * 2, 2, 2);
+            } else {
+                drawSprite((w - cols * 16) / 2 + x * 16, (h - rows * 16) / 2 + y * 16, 0, 0, 2, 2);
+            }
         }
     }
 }
