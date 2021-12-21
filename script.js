@@ -45,6 +45,7 @@ function appUpdate(dt) {
             f = 0;
         } else {
             f = 0;
+            time = -1
         }
     }
 
