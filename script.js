@@ -4,6 +4,7 @@ var cols = 8;
 var rows = 6;
 var f = 0;
 var time = -1;
+var mouseDown = false;
 
 function appInit() {
 
@@ -39,7 +40,7 @@ function appUpdate(dt) {
             time = -1;
         }
     }
-    if (mouseBtn(0)) {
+    if (mouseBtn(0) == !mouseDown) {
         if (f == 0) {
             time = 0;
             f = 0;
@@ -52,6 +53,7 @@ function appUpdate(dt) {
     if (mouseBtn(0) && mouseX() > screenWidth() - 16 && mouseY() > screenHeight() - 16) {
         reload();
     }
+    mosueDown = mouseBtn(0);
 }
 
 // drawSprite(x, y, tileX, tileY)
